@@ -2,6 +2,7 @@
 <html lang="{{ page.lang }}">
 <head>
   {{ partial('_partials/head/head.njk', {}, {cache: theme.cache.enable}) }}
+  {%- include '_partials/languages.njk' -%}
   {%- include '_partials/head/head-unique.njk' -%}
   <title>{% block title %}{% endblock %}</title>
   {{ partial('_third-party/analytics/index.njk', {}, {cache: theme.cache.enable}) }}
@@ -33,7 +34,6 @@
 
   <footer class="footer">
     <div class="footer-inner">
-      {%- include '_partials/languages.njk' -%}
       {{ partial('_partials/footer.njk', {}, {cache: theme.cache.enable}) }}
     </div>
   </footer>
